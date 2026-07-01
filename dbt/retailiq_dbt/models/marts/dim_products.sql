@@ -1,12 +1,13 @@
 SELECT
     product_id,
     product_name,
-    category_clean      AS category,
+    category_clean                                    AS category,
     sub_category,
     brand,
-    unit_cost,
+    -- Fix DQ-005: estimate unit_cost if NULL
+    COALESCE(unit_cost, unit_price * 0.5)            AS unit_cost,
     unit_price,
-    unit_price - unit_cost  AS unit_margin,
+    unit_price - COALESCE(unit_cost, unit_price * 0.5) AS unit_margin,
     sku,
     is_active,
     launch_date,
