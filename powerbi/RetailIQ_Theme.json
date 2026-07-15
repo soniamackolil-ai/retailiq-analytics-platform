@@ -1,0 +1,31 @@
+
+{
+  "name": "RetailIQ Analytics Theme",
+  "dataColors": [
+    "#1B4F72",
+    "#2E86AB",
+    "#F18F01",
+    "#1B7A34",
+    "#C0392B",
+    "#E67E22",
+    "#8E44AD",
+    "#17A589"
+  ],
+  "background": "#F8FAFC",
+  "foreground": "#1A1A1A",
+  "tableAccent": "#1B4F72",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "fontSize": [{ "value": 11 }]
+      }
+    },
+    "card": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } } }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#1B4F72" } }, "radius": 5 }]
+      }
+    }
+  }
+}

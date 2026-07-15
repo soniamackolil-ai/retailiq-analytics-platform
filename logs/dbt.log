@@ -67,3 +67,48 @@
 [0m13:28:33.706519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286D16C7E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286D1494290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286D0F87350>]}
 [0m13:28:33.707983 [debug] [MainThread]: Flushing usage events
 [0m13:28:34.953273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:29:10.690642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B92C797F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B8E8DEE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B94E1FED0>]}
+
+
+============================== 11:29:10.705983 | ce94d18f-d0fc-49fa-a485-5b8731c1b25c ==============================
+[0m11:29:10.705983 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:29:10.707491 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sonia\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:29:10.708722 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Sonia\Documents\retailiq-analytics-platform\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:29:10.710387 [debug] [MainThread]: Command `dbt run` failed at 11:29:10.710109 after 0.46 seconds
+[0m11:29:10.711314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B94E376F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B94ECD6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B94ED4C00>]}
+[0m11:29:10.712740 [debug] [MainThread]: Flushing usage events
+[0m11:29:12.182083 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:06:19.948095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237D8497F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237948EE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237F9EBED0>]}
+
+
+============================== 14:06:19.959458 | bedb2b6e-dc16-4dc1-a001-d78c45464beb ==============================
+[0m14:06:19.959458 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:06:19.960734 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Sonia\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select dim_customers --full-refresh', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:06:19.961593 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Sonia\Documents\retailiq-analytics-platform\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:06:19.963221 [debug] [MainThread]: Command `dbt run` failed at 14:06:19.962639 after 0.27 seconds
+[0m14:06:19.963938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237FA076F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237FA9D6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002237FAA0C00>]}
+[0m14:06:19.964506 [debug] [MainThread]: Flushing usage events
+[0m14:06:20.523028 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:07:58.988755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABFDB597F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABF97EEE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABFFCFBED0>]}
+
+
+============================== 14:07:58.992841 | b2fffe67-9cd6-46e6-a101-268c3db40ea7 ==============================
+[0m14:07:58.992841 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:07:58.993299 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sonia\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --select dim_customers --full-refresh', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:07:58.993646 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Sonia\Documents\retailiq-analytics-platform\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:07:58.994286 [debug] [MainThread]: Command `dbt run` failed at 14:07:58.994194 after 0.12 seconds
+[0m14:07:58.994524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABFFD176F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABFFDAD6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ABFFDB4C00>]}
+[0m14:07:58.994767 [debug] [MainThread]: Flushing usage events
+[0m14:07:59.523231 [debug] [MainThread]: An error was encountered while trying to flush usage events
