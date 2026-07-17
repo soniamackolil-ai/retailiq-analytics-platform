@@ -26,10 +26,4 @@ jobs:
 
   
 
-# For deploy-prod.yml: 
 
-#   branch: main 
-
-#   environment: Production  (add required reviewer in GitHub Environments settings) 
-
-#   WORKSPACE_ID: ${{ secrets.PROD_WORKSPACE_ID }} 
