@@ -1,0 +1,35 @@
+name: Deploy to Power BI Test 
+
+on: 
+
+  push: 
+
+    branches: 
+
+      - test                         # <-- Change 1: test branch 
+
+jobs: 
+
+  deploy-to-test: 
+
+    environment: Test                # <-- Change 2: Test environment 
+
+    ... 
+
+        env: 
+
+          WORKSPACE_ID: ${{ secrets.TEST_WORKSPACE_ID }}  # <-- Change 3 
+
+          ENVIRONMENT:  Test 
+
+        run: python scripts/deploy_powerbi.py 
+
+  
+
+# For deploy-prod.yml: 
+
+#   branch: main 
+
+#   environment: Production  (add required reviewer in GitHub Environments settings) 
+
+#   WORKSPACE_ID: ${{ secrets.PROD_WORKSPACE_ID }} 
