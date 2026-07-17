@@ -1,0 +1,85 @@
+name: Deploy to Power BI Dev 
+
+  
+
+on: 
+
+  push: 
+
+    branches: 
+
+      - dev                          # Only triggers on dev branch 
+
+    paths: 
+
+      - 'reports/**.pbix'            # Only when .pbix file changes 
+
+  
+
+jobs: 
+
+  deploy-to-dev: 
+
+    runs-on: ubuntu-latest 
+
+    environment: Development 
+
+  
+
+    steps: 
+
+      - name: Checkout repository 
+
+        uses: actions/checkout@v4 
+
+  
+
+      - name: Set up Python 
+
+        uses: actions/setup-python@v5 
+
+        with: 
+
+          python-version: '3.11' 
+
+  
+
+      - name: Install dependencies 
+
+        run: pip install requests msal 
+
+  
+
+      - name: Deploy to Dev Workspace 
+
+        env: 
+
+          TENANT_ID:        ${{ secrets.TENANT_ID }} 
+
+          CLIENT_ID:        ${{ secrets.CLIENT_ID }} 
+
+          CLIENT_SECRET:    ${{ secrets.CLIENT_SECRET }} 
+
+          WORKSPACE_ID:     ${{ secrets.DEV_WORKSPACE_ID }} 
+
+          PBIX_PATH:        reports/RetailIQ_project.pbix 
+
+          REPORT_NAME:      RetailIQ_project 
+
+          ENVIRONMENT:      Development 
+
+        run: python scripts/deploy_powerbi.py 
+
+  
+
+      - name: Notify Teams on success 
+
+        if: success() 
+
+        run: | 
+
+          curl -H 'Content-Type: application/json' \ 
+
+               -d '{"text":"RetailIQ deployed to DEV successfully!"}' \ 
+
+               ${{ secrets.TEAMS_WEBHOOK_URL }} 
